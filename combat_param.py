@@ -4,36 +4,44 @@ def roll_attack_dice(pokemon,attack_p):
     dice_result = random.randint(1,20)
     print(f"{pokemon} atacou!")
 
-    #print(f"Tirou {dice_result}")
-
     if dice_result == 20:
         Atk_p = round(attack_p * 0.3)
         print("CRITICAL HIT!")
     else:
         Atk_p = round(attack_p * 0.15)
-
-
-    #print(f"Seu poder de ataque é {Atk_p}")
+    
     total_power = round(dice_result+Atk_p,0)
     return Atk_p, total_power
 
 def roll_damage_dice():
     dice_result = random.randint(1,8)
-    print(dice_result)
+    
     return dice_result
 
 
-def get_defense(pokemon, deffense_p):
+def get_dodge_rate(pokemon, dodge_p):
     dice_result = random.randint(1,20)    
     #print(f"Tirou {dice_result}")
     if dice_result == 20:
-        Def_p = round(deffense_p * 0.3)
+        Spd_p = round(dodge_p * 0.3)
+        print("HIGH SPEED!")
+    else:
+        Spd_p = round(dodge_p * 0.15)
+   
+    dodge_speed = round(dice_result+Spd_p,0)
+    return Spd_p, dodge_speed
+
+def get_defense_power(pokemon, defense_p):
+    dice_result = random.randint(1,20)  
+    
+    if dice_result == 20:
+        Def_p = round(defense_p * 0.3)
         print("ENDURE!")
     else:
-        Def_p = round(deffense_p * 0.15)
-    #print(f"Seu poder de defesa é {Def_p}")
-    total_defense = round(dice_result+Def_p,0)
-    return Def_p, total_defense
+        Def_p = round(defense_p * 0.15)
+   
+    Def_power = round(dice_result+Def_p,0)
+    return Def_p, Def_power
 
 
 def player_actions(pokemon,attack_p):
