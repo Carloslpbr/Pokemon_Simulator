@@ -1,4 +1,5 @@
 import random
+import settings
 
 def roll_attack_dice(pokemon,attack_p):
     dice_result = random.randint(1,20)
@@ -73,3 +74,17 @@ def inflict_damage(base_damage,target_def):
     total_damage = dice_damage+base_damage
     damage_inflicted = total_damage - target_def
     return damage_inflicted
+
+
+def attack(player_1, eDef, p2_hp, damage_done, result,player_2):
+                    print(f"{player_1} acertou")
+                    damage_inflicted = inflict_damage(result,eDef)
+                    if damage_inflicted > 0:                    
+                        p2_hp -= damage_inflicted
+                        damage_done += damage_inflicted
+                        print(f"Dano causado: {damage_inflicted}")
+                        print("")
+                    elif damage_inflicted <= 0:
+                        print(f"{player_2} resistiu ao ataque de {player_1}!")
+                    settings.any_char()
+                    return p2_hp, damage_done

@@ -4,6 +4,7 @@ import combat_param
 import os
 import random
 import settings
+import save_data
 
 # Basic
 
@@ -58,8 +59,8 @@ def battle_generator():
     battle_n = 1
     round_n = 1
     damage_done = 0
-    damage_taken = ...
-
+    damage_taken = 0
+    
     while battle_n < settings.combats:      
         p2_name, p2_hp, p2_ap, p2_df, p2_sa, p2_sd, p2_sp = generate_enemy()
 
@@ -89,26 +90,15 @@ def battle_generator():
             eDef, eDef_p = combat_param.get_defense_power(p2_name,p2_df)
             
             if power_result > eSpeed_p:
-                print(f"{player_1} acertou")
-                damage_inflicted = combat_param.inflict_damage(result,eDef)
-                if damage_inflicted > 0:
-                    #colocar em função ?
-                    p2_hp -= damage_inflicted
-                    damage_done += damage_inflicted
-                    print(f"Dano causado: {damage_inflicted}")
-                    print("")
-                elif damage_inflicted <= 0:
-                    print(f"{p2_name} resistiu ao ataque de {player_1}!")
+                
+                p2_hp, damage = combat_param.attack(player_1, eDef, p2_hp, damage_done, result,p2_name)
+                damage_done += damage
 
                 if p2_hp <= 0:
-                    print("Você venceu! ")
-                    # colocar em uma função
-                    with open(output_file, "a") as log:        
-                        log.write(f'{player_1}, Win,{p2_name}, {battle_n}, {round_n}, {damage_done}, {damage_taken}\n')
-                    battle_n += 1
-                    round_n = 1
-                    damage_done = 0
-                settings.any_char()            
+
+                    save_data.save_data_w(output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
+                    break
+                            
 
             else:
                 #colocar em função ?
@@ -137,26 +127,15 @@ def battle_generator():
 
             ###dek
             if ePower_result > pSpeed_p:
-                print(f"{player_1} acertou")
-                damage_inflicted = combat_param.inflict_damage(eResult,pDef) #substituir eDef
-                if damage_inflicted > 0:
-                    #colocar em função ?
-                    p1_hp -= damage_inflicted
-                    damage_done += damage_inflicted
-                    print(f"Dano causado: {damage_inflicted}")
-                    print("")
-                elif damage_inflicted <= 0:
-                    print(f"{player_1} resistiu ao ataque de {p2_name}!")
+
+                p1_hp, damage_e = combat_param.attack(p2_name, pDef, p1_hp, damage_taken, eResult, player_1)
+                damage_taken += damage_e
 
                 if p1_hp <= 0:
-                    print("Você venceu! ")
-                    # colocar em uma função
-                    with open(output_file, "a") as log:        
-                        log.write(f'{player_1}, Lost,{p2_name}, {battle_n}, {round_n}, {damage_done}, {damage_taken}\n')
-                    battle_n += 1
-                    round_n = 1
-                    damage_done = 0
-                settings.any_char()            
+                    save_data.save_data_l(output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
+                    
+                    break
+                                
 
             else:
                 #colocar em função ?
@@ -173,4 +152,3 @@ def battle_generator():
    
 
 battle_generator()
-
