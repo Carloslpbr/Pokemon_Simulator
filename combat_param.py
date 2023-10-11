@@ -93,5 +93,6 @@ def attack(player_1, eDef, p2_hp,result,player_2):
                         print("")
                     elif damage_inflicted <= 0:
                         print(f"{player_2} resistiu ao ataque de {player_1}!")
+                        damage_inflicted = 0
                     settings.any_char()
                     return p2_hp, damage_inflicted
