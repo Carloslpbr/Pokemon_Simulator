@@ -6,6 +6,9 @@ import random
 import settings
 import save_data
 import sys
+import datetime
+
+
 
 # Basic
 player_1 = pokemon_select.set_pokemon()
@@ -13,6 +16,7 @@ settings.any_char()
 basic_url = "https://pokeapi.co/api/v2/pokemon/"
 current_directory = os.path.dirname(os.path.abspath(__file__))
 output_file = os.path.join(current_directory, "battle_log.csv")
+game_date = datetime.date.today()
 
 
 #implementar leitura de txt aqui
@@ -91,8 +95,8 @@ def battle_generator():
                 
 
                 if p2_hp <= 0:
-                    save_data.save_data_w(output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
-                    sys.exit()
+                    save_data.save_data_w(game_date, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
+                    
                             
             else:
                 #colocar em função ?
@@ -115,7 +119,7 @@ def battle_generator():
                 damage_taken += damage_e
 
                 if p1_hp <= 0:
-                    save_data.save_data_l(output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
+                    save_data.save_data_l(game_date, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
                     sys.exit()
                                 
             else:
