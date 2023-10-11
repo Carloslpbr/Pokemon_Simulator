@@ -2,6 +2,9 @@ import requests
 import os
 import random
 import pokemon_moves
+import json
+import sys
+import os
 
 
 def get_pStats(pokemon_data):
@@ -77,17 +80,23 @@ def set_pokemon():
         #define a base do pokemon, agrupando a url base + user_input
         user_pData = requests.get("https://pokeapi.co/api/v2/pokemon/"+user_input)
         
+        try:
         #retorna os dados em json
-        json_data = user_pData.json()  
-        pStats = get_pStats(json_data)
-        os.system('cls')
+            json_data = user_pData.json()  
+            pStats = get_pStats(json_data)
+            os.system('cls')
+        except json.JSONDecodeError as Error:
+            exception_name = Error.__class__.__name__
+            os.system('cls')
+            print(f"{exception_name}: {user_input} não é um Pokémon válido,\ncheque a lista para ver quais estão disponíveis")
+            print("Saindo do programa!")
+            sys.exit()
 
         #retorna todos os dados do pokemon
         show_pokemon_data(user_input,pStats)
         print("")
         pokemon_skills(user_input)
 
-        #start = input("Aperte 1 para continuar: ")
 
  
         return user_input 
