@@ -5,6 +5,7 @@ import os
 import random
 import settings
 import save_data
+import sys
 
 # Basic
 player_1 = pokemon_select.set_pokemon()
@@ -85,13 +86,13 @@ def battle_generator():
 
             if power_result > eSpeed_p:
                 #p2_hp, damage = combat_param.attack(player_1, eDef_p, p2_hp, damage_done, result,p2_name)
-                p2_hp, damage = combat_param.attack(player_1, eDef_p, p2_hp, result,p2_name)
+                p2_hp, damage = combat_param.attack(player_1, eDef_p, p2_hp, power_result, p2_name)
                 damage_done += damage
                 
 
                 if p2_hp <= 0:
                     save_data.save_data_w(output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
-                    break
+                    sys.exit()
                             
             else:
                 #colocar em função ?
@@ -110,12 +111,12 @@ def battle_generator():
 
             if ePower_result > pSpeed_p:
                 #p1_hp, damage_e = combat_param.attack(p2_name, pDef_p, p1_hp, damage_taken, eResult, player_1)
-                p1_hp, damage_e = combat_param.attack(p2_name, pDef_p, p1_hp, eResult, player_1)
+                p1_hp, damage_e = combat_param.attack(p2_name, pDef_p, p1_hp, ePower_result, player_1)
                 damage_taken += damage_e
 
                 if p1_hp <= 0:
                     save_data.save_data_l(output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
-                    break
+                    sys.exit()
                                 
             else:
                 
