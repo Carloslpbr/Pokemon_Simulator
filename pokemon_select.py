@@ -33,8 +33,8 @@ def show_pokemon_data(pokemon, poke_url):
     print("")
     set_dificulty(avg)
     print("")
-    print("Suas skills:")
-    print(pokemon_skills(pokemon))
+    #print("Suas skills:")
+    #print(pokemon_skills(pokemon))
   
 
 def stats_desc(stat_value):
@@ -95,11 +95,13 @@ def set_pokemon():
         #retorna todos os dados do pokemon
         show_pokemon_data(user_input,pStats)
         print("")
-        pokemon_skills(user_input)
-
+        skills = pokemon_skills(user_input)
+        print("")
+        print("Suas skills:")
+        print(skills)
 
  
-        return user_input 
+        return user_input, skills
 
 
 

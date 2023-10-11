@@ -11,7 +11,7 @@ import user_data
 
 # Basic
 user = user_data.set_user
-player_1 = pokemon_select.set_pokemon()
+player_1, pSkills = pokemon_select.set_pokemon()
 settings.any_char()
 basic_url = "https://pokeapi.co/api/v2/pokemon/"
 current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -85,7 +85,7 @@ def battle_generator():
             ##### Player turn
             print("Battle log:")
        
-            pAction, result, power_result = combat_param.player_actions(player_1,p1_ap)          
+            pAction, result, power_result = combat_param.player_actions(player_1,p1_ap,pSkills)          
 
 
             if power_result > eSpeed_p:

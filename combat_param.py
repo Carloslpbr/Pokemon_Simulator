@@ -45,7 +45,7 @@ def get_defense_power(pokemon, defense_p):
     return Def_p, Def_power
 
 
-def player_actions(pokemon,attack_p):
+def player_actions(pokemon,attack_p,skill_list):
 
     while True: 
         print("[1] Atacar, [2] Special")
@@ -55,8 +55,11 @@ def player_actions(pokemon,attack_p):
         if pAction == "1":
             result, power_result = roll_attack_dice(pokemon,attack_p)
             return pAction, result, power_result
+        elif pAction == "2":
+             print(skill_list)
         else:
             print("Opção invalida!")
+            
             
 
     
@@ -96,3 +99,4 @@ def attack(player_1, eDef, p2_hp,result,player_2):
                         damage_inflicted = 0
                     settings.any_char()
                     return p2_hp, damage_inflicted
+
