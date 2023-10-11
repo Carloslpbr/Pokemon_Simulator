@@ -48,7 +48,7 @@ def get_defense_power(pokemon, defense_p):
 def player_actions(pokemon,attack_p,skill_list):
 
     while True: 
-        print("[1] Atacar, [2] Special")
+        print("[1] Atacar, [2] Special, [3] Item, [4] Desistir")
         pAction = input("Digite sua ação: ")
         print("")      
 
@@ -56,7 +56,15 @@ def player_actions(pokemon,attack_p,skill_list):
             result, power_result = roll_attack_dice(pokemon,attack_p)
             return pAction, result, power_result
         elif pAction == "2":
-             print(skill_list)
+             print("")             
+             print("Skill list:")
+             print(f"[1] {skill_list[0]}")
+             print(f"[2] {skill_list[1]}")
+             print(f"[3] {skill_list[2]}")
+             print(f"[4] {skill_list[3]}")
+             print("")
+             selected_skill = input("Selecione a skill que deseja usar: ")
+             return selected_skill
         else:
             print("Opção invalida!")
             
