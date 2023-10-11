@@ -14,6 +14,22 @@ def roll_attack_dice(pokemon,attack_p):
     total_power = round(dice_result+Atk_p,0)
     return Atk_p, total_power
 
+def roll_special_dice(pokemon,attack_p,skill):
+    dice_result = random.randint(1,20)
+    print("")
+    print(f"{pokemon} usou {skill}")
+    print("")
+    if dice_result == 20:
+        Spe_p = round(attack_p * 0.3)
+        print("CRITICAL HIT!")
+        print("")
+    else:
+        Spe_p = round(attack_p * 0.15)
+    
+    stotal_power = round(dice_result+Spe_p,0)
+    return Spe_p, stotal_power
+
+
 def roll_damage_dice():
     dice_result = random.randint(1,8)
     
@@ -45,28 +61,34 @@ def get_defense_power(pokemon, defense_p):
     return Def_p, Def_power
 
 
-def player_actions(pokemon,attack_p,skill_list):
-
-    while True: 
+def player_actions(pokemon, attack_p, skill_list, special_p):
+    while True:
         print("[1] Atacar, [2] Special, [3] Item, [4] Desistir")
         pAction = input("Digite sua ação: ")
-        print("")      
+        print("")
 
         if pAction == "1":
-            result, power_result = roll_attack_dice(pokemon,attack_p)
+            result, power_result = roll_attack_dice(pokemon, attack_p)
             return pAction, result, power_result
         elif pAction == "2":
-             print("")             
-             print("Skill list:")
-             print(f"[1] {skill_list[0]}")
-             print(f"[2] {skill_list[1]}")
-             print(f"[3] {skill_list[2]}")
-             print(f"[4] {skill_list[3]}")
-             print("")
-             selected_skill = input("Selecione a skill que deseja usar: ")
-             return selected_skill
+            print("")
+            print("Skill list:")
+            for i in range(len(skill_list)):
+                print(f"[{i + 1}] {skill_list[i]}")
+            print("")
+            selected_skill = int(input("Selecione a skill que deseja usar: ")) - 1
+
+            if 0 <= selected_skill < len(skill_list):
+                selected_skill = skill_list[selected_skill]
+                result, power_result = roll_special_dice(pokemon, special_p, selected_skill)
+                return pAction, result, power_result
+            
+            else:
+                print("Seleção de skill inválida. Tente novamente.")
+        elif pAction == "3":
+            print("Itens ainda não implementados ;)")
         else:
-            print("Opção invalida!")
+            print("Opção inválida!")
             
             
 

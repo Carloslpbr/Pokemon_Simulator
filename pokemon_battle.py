@@ -85,7 +85,7 @@ def battle_generator():
             ##### Player turn
             print("Battle log:")
        
-            pAction, result, power_result = combat_param.player_actions(player_1,p1_ap,pSkills)          
+            pAction, result, power_result = combat_param.player_actions(player_1,p1_ap,pSkills,p2_sa)          
 
 
             if power_result > eSpeed_p:
