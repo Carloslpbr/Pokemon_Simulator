@@ -20,7 +20,7 @@ game_date = datetime.date.today()
 
 
 #implementar leitura de txt aqui
-current_game = ...
+game_id =  user_data.game_id
 
 def generate_enemy():
     pokemon_max_num = 149
@@ -66,17 +66,18 @@ def headers(battle_n,round_n, player_1, p1_hp, p2_name, p2_hp):
 def battle_generator():
     p1_hp, p1_ap, p1_df, p1_sa, p1_sd, p1_sp = player_stats() 
     battle_n = 1
-    round_n = 1
-    damage_done = 0
-    damage_taken = 0
-    
-    while battle_n < settings.combats:      
-        p2_name, p2_hp, p2_ap, p2_df, p2_sa, p2_sd, p2_sp = generate_enemy()
 
+    while battle_n <= settings.combats:      
+        p2_name, p2_hp, p2_ap, p2_df, p2_sa, p2_sd, p2_sp = generate_enemy()
+        
         pSpeed, pSpeed_p = combat_param.get_dodge_rate(player_1,p1_sp)
         pDef, pDef_p = combat_param.get_defense_power(player_1,p1_df)                                 
         eSpeed, eSpeed_p = combat_param.get_dodge_rate(p2_name,p2_sp)      
         eDef, eDef_p = combat_param.get_defense_power(p2_name,p2_df)
+
+        round_n = 1
+        damage_done = 0
+        damage_taken = 0
 
         while p1_hp > 0 and p2_hp > 0:              
             
@@ -95,7 +96,7 @@ def battle_generator():
                 
 
                 if p2_hp <= 0:
-                    save_data.save_data_w(game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
+                    save_data.save_data_w(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
                     battle_n += 1
                     break
                             
@@ -120,7 +121,7 @@ def battle_generator():
                 damage_taken += damage_e
 
                 if p1_hp <= 0:
-                    save_data.save_data_l(game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
+                    save_data.save_data_l(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
                     sys.exit()
                                 
             else:

@@ -89,10 +89,7 @@ def player_actions(pokemon, attack_p, skill_list, special_p):
             print("Itens ainda não implementados ;)")
         else:
             print("Opção inválida!")
-            
-            
-
-    
+      
 def enemy_action(pokemon,attack_p):
     eAction = "1"
     eResult, epower_result = roll_attack_dice(pokemon,attack_p)
@@ -114,7 +111,6 @@ def inflict_damage(base_damage,target_def):
     total_damage = dice_damage+base_damage
     damage_inflicted = total_damage - target_def
     return damage_inflicted
-
 
 def attack(player_1, eDef, p2_hp,result,player_2):
                     print(f"{player_1} acertou")
