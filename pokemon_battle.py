@@ -84,10 +84,7 @@ def battle_generator():
         normal_attack_count = 0
         special_attack_count = 0
         used_skills = []             
-        count_skills = Counter(used_skills)
-        sort_skills = sorted(count_skills.items(), key=lambda item: item[1], reverse=True)
-        if len(used_skills) > 1:
-            favorite_skill = sort_skills[1][0]
+               
 
         while p1_hp > 0 and p2_hp > 0:  
                         
@@ -114,6 +111,9 @@ def battle_generator():
 
                 if p2_hp <= 0:
                     if special_attack_count> normal_attack_count:
+                        count_skills = Counter(used_skills)
+                        sort_skills = sorted(count_skills.items(), key=lambda item: item[1], reverse=True)
+                        favorite_skill = sort_skills[0][0]
                         save_data.save_data_w(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken,favorite_skill)
                         battle_n += 1
                         break
@@ -145,6 +145,9 @@ def battle_generator():
                     #save_data.save_data_l(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
                     
                     if special_attack_count> normal_attack_count:
+                        count_skills = Counter(used_skills)
+                        sort_skills = sorted(count_skills.items(), key=lambda item: item[1], reverse=True)
+                        favorite_skill = sort_skills[0][0]
                         save_data.save_data_l(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken,favorite_skill)
                         sys.exit()
                     elif special_attack_count < normal_attack_count:
