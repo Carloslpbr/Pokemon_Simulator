@@ -1,5 +1,15 @@
 1,carlos,2023-10-13,scyther, Win,paras, 1, 4, 45, 50
 1,carlos,2023-10-13,scyther, Win,ivysaur, 2, 19, 70, 12
-1,carlos,2023-10-13,scyther, Win,rhyhorn, 3, 4, 96, 7
-
-
+1,carlos,2023-10-13,scyther, Win,rhyhorn, 3, 4, 96, 72,
+2,ju,2023-10-13,scyther, Win,golem, 1, 3, 80, 52
+2,ju,2023-10-13,charmander, Win,jynx, 2, 3, 97, 15
+3,carlos,2023-10-13,pikachu, Lost,arcanine, 1, 3, 23, 90
+4,1,2023-10-13,scyther, Win,weedle, 1, 3, 66, 0
+5,samuel,2023-10-13,mew, Win,diglett, 1, 2, 10, 0
+3,carlos,2023-10-13,scyther, Win,magneton, 1, 5, 62, 66
+3,carlos,2023-10-13,scyther, Win,jolteon, 1, 5, 99, 0
+3,carlos,2023-10-13,scyther, Win,ponyta, 1, 4, 62, 50,Standard-attack
+4,mew,2023-10-13,mew, Win,weezing, 1, 6, 67, 23, None
+5,ash,2023-10-13,charizard, Lost,vaporeon, 1, 5, 65, 78, None
+3,carlos,2023-10-13,charmander, Win,abra, 1, 1, 34, 0, None
+3,carlos,2023-10-13,charmander, Win,eevee, 2, 7, 60, 0, Standard-attack

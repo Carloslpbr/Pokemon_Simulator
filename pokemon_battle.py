@@ -8,6 +8,7 @@ import save_data
 import sys
 import datetime
 import user_data
+from collections import Counter
 
 # Basic
 user = user_data.set_user
@@ -67,6 +68,7 @@ def battle_generator():
     p1_hp, p1_ap, p1_df, p1_sa, p1_sd, p1_sp = player_stats() 
     battle_n = 1
 
+    favorite_skill = None
     while battle_n <= settings.combats:      
         p2_name, p2_hp, p2_ap, p2_df, p2_sa, p2_sd, p2_sp = generate_enemy()
         
@@ -79,15 +81,30 @@ def battle_generator():
         damage_done = 0
         damage_taken = 0
 
-        while p1_hp > 0 and p2_hp > 0:              
+        normal_attack_count = 0
+        special_attack_count = 0
+        used_skills = []             
+        count_skills = Counter(used_skills)
+        sort_skills = sorted(count_skills.items(), key=lambda item: item[1], reverse=True)
+        if len(used_skills) > 1:
+            favorite_skill = sort_skills[1][0]
+
+        while p1_hp > 0 and p2_hp > 0:  
+                        
             
             headers(battle_n,round_n, player_1, p1_hp, p2_name, p2_hp)
 
             ##### Player turn
             print("Battle log:")
        
-            pAction, result, power_result = combat_param.player_actions(player_1,p1_ap,pSkills,p2_sa)          
-
+            pAction, result, power_result, skill = combat_param.player_actions(player_1,p1_ap,pSkills,p2_sa)          
+            
+            if pAction == "1":
+                normal_attack_count += 1
+            if pAction == "2":
+                special_attack_count += 1
+                used_skills.append(skill)         
+ 
 
             if power_result > eSpeed_p:
                 #p2_hp, damage = combat_param.attack(player_1, eDef_p, p2_hp, damage_done, result,p2_name)
@@ -96,10 +113,14 @@ def battle_generator():
                 
 
                 if p2_hp <= 0:
-                    save_data.save_data_w(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
-                    battle_n += 1
-                    break
-                            
+                    if special_attack_count> normal_attack_count:
+                        save_data.save_data_w(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken,favorite_skill)
+                        battle_n += 1
+                        break
+                    elif special_attack_count < normal_attack_count:
+                        save_data.save_data_w(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken,'Standard-attack')
+                        battle_n += 1
+                        break   
             else:
                 #colocar em função ?
                 print(f"{p2_name} Esquivou do seu ataque!")                
@@ -121,15 +142,23 @@ def battle_generator():
                 damage_taken += damage_e
 
                 if p1_hp <= 0:
-                    save_data.save_data_l(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
-                    sys.exit()
-                                
+                    #save_data.save_data_l(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
+                    
+                    if special_attack_count> normal_attack_count:
+                        save_data.save_data_l(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken,favorite_skill)
+                        sys.exit()
+                    elif special_attack_count < normal_attack_count:
+                        save_data.save_data_l(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken,'Standard-attack')
+                        sys.exit() 
+              
             else:
                 
                 print(f"{player_1} Esquivou do seu ataque!")                
                 print("")
                 settings.any_char()
 
+            
             round_n += 1
-  
+    
+
 battle_generator()
