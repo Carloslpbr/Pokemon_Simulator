@@ -111,6 +111,7 @@ def battle_generator():
 
                 if p2_hp <= 0:
                     if special_attack_count> normal_attack_count:
+                        #colocar em função
                         count_skills = Counter(used_skills)
                         sort_skills = sorted(count_skills.items(), key=lambda item: item[1], reverse=True)
                         favorite_skill = sort_skills[0][0]
@@ -118,6 +119,7 @@ def battle_generator():
                         battle_n += 1
                         break
                     elif special_attack_count < normal_attack_count:
+                        #colocar em função
                         save_data.save_data_w(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken,'Standard-attack')
                         battle_n += 1
                         break   
@@ -145,12 +147,14 @@ def battle_generator():
                     #save_data.save_data_l(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken)
                     
                     if special_attack_count> normal_attack_count:
+                        #colocar em função
                         count_skills = Counter(used_skills)
                         sort_skills = sorted(count_skills.items(), key=lambda item: item[1], reverse=True)
                         favorite_skill = sort_skills[0][0]
                         save_data.save_data_l(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken,favorite_skill)
                         sys.exit()
                     elif special_attack_count < normal_attack_count:
+                        #colocar em função
                         save_data.save_data_l(game_id, game_date, user, output_file,player_1,p2_name,battle_n,round_n,damage_done,damage_taken,'Standard-attack')
                         sys.exit() 
               
