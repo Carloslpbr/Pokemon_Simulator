@@ -52,7 +52,7 @@ def main():
     poke_description_url = "https://pokeapi.co/api/v2/pokemon-species/"
     
     # Define o limite de importação
-    import_limit = pokemon_import_limit(3)
+    import_limit = pokemon_import_limit(151)
     
     # Faz uma solicitação HTTP para obter os dados básicos dos Pokémon
     data = request_data(poke_base_url, params=import_limit)

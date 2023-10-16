@@ -69,7 +69,8 @@ def player_actions(pokemon, attack_p, skill_list, special_p):
 
         if pAction == "1":
             result, power_result = roll_attack_dice(pokemon, attack_p)
-            return pAction, result, power_result
+            selected_skill = "Standard-attack"
+            return pAction, result, power_result, selected_skill
         elif pAction == "2":
             print("")
             print("Skill list:")
@@ -77,11 +78,10 @@ def player_actions(pokemon, attack_p, skill_list, special_p):
                 print(f"[{i + 1}] {skill_list[i]}")
             print("")
             selected_skill = int(input("Selecione a skill que deseja usar: ")) - 1
-
             if 0 <= selected_skill < len(skill_list):
                 selected_skill = skill_list[selected_skill]
                 result, power_result = roll_special_dice(pokemon, special_p, selected_skill)
-                return pAction, result, power_result
+                return pAction, result, power_result, selected_skill
             
             else:
                 print("Seleção de skill inválida. Tente novamente.")
@@ -89,10 +89,7 @@ def player_actions(pokemon, attack_p, skill_list, special_p):
             print("Itens ainda não implementados ;)")
         else:
             print("Opção inválida!")
-            
-            
-
-    
+      
 def enemy_action(pokemon,attack_p):
     eAction = "1"
     eResult, epower_result = roll_attack_dice(pokemon,attack_p)
@@ -114,7 +111,6 @@ def inflict_damage(base_damage,target_def):
     total_damage = dice_damage+base_damage
     damage_inflicted = total_damage - target_def
     return damage_inflicted
-
 
 def attack(player_1, eDef, p2_hp,result,player_2):
                     print(f"{player_1} acertou")

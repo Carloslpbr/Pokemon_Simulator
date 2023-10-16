@@ -11,7 +11,7 @@ def evolution_chain():
     base_url = "https://pokeapi.co/api/v2/evolution-chain/"
 
     # Define o limite de importação
-    params = pokemon_evolution_chain_limit(40)
+    params = pokemon_evolution_chain_limit(77)
 
     # Caminho do arquivo onde os dados da cadeia de evolução serão salvos
     current_directory = os.path.dirname(os.path.abspath(__file__))
@@ -41,8 +41,11 @@ def evolution_chain():
             base_form = base
 
             # Obtém o nome da primeira evolução
-            evolution1 = data['chain']['evolves_to'][0]['species']['name']
-            evolution_1 = evolution1
+            try:
+                evolution1 = data['chain']['evolves_to'][0]['species']['name']
+                evolution_1 = evolution1
+            except:
+                evolution_1 = None
 
             try:
                 # Tenta obter o nome da segunda evolução, se existir
@@ -64,3 +67,5 @@ def evolution_chain():
                 file_2.write(f'"{base_form}", "{evolution_1}" \n')
 
         os.system('cls')
+
+evolution_chain()
