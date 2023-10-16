@@ -8,27 +8,27 @@ limit = 100000
 index = 1
 max_trainers = len(random_data.trainers)-1
 max_pokemon = len(random_data.pokemon_list)-1
-top_players = ["lance dragon master", "red champion"]
+top_players = ["Lance Dragon Master", "Red Champion"]
 current_directory = os.path.dirname(os.path.abspath(__file__))
 output_file = os.path.join(current_directory, "battle_log.csv")
 
 
 def set_pokemon(trainer):
-    if trainer == "lance dragon master":
+    if trainer == "Lance Dragon Master":
         pokemon = random_data.lance_pokemon[random.randint(0,3)].lower()
-        return pokemon
-    elif trainer == "red champion":
+        return pokemon.lower()
+    elif trainer == "Red Champion":
         pokemon = random_data.red_pokemon[random.randint(0,8)].lower()
-        return pokemon
-    elif trainer == "ash ketchum":
+        return pokemon.lower()
+    elif trainer == "Ash Ketchum":
         pokemon = random_data.ash_pokemon[random.randint(0,6)].lower()
-        return pokemon
-    elif trainer == "misty waterflower":
+        return pokemon.lower()
+    elif trainer == "Misty Waterflower":
         pokemon = random_data.misty_pokemon[random.randint(0,4)].lower()
-        return pokemon
-    elif trainer == "brock rock":
+        return pokemon.lower()
+    elif trainer == "Brock Rock":
         pokemon = random_data.brock_pokemon[random.randint(0,2)].lower()
-        return pokemon
+        return pokemon.lower()
     else:
         pokemon = random_data.pokemon_list[random.randint(0,max_pokemon)].lower()
         return pokemon
@@ -40,10 +40,10 @@ def set_enemy_pokemon():
         return enemy_pokemon
     else:
         enemy_pokemon = random_data.pokemon_list[random.randint(0,max_pokemon)]
-        return enemy_pokemon
+        return enemy_pokemon.lower()
 
 def set_battle_result(trainer, enemy_pokemon):
-    if enemy_pokemon != 'mewtwo':
+    if enemy_pokemon != 'Mewtwo':
         if trainer in top_players:
             if random.randint(0,10) <= 2:
                 battle_result = "Loss"
@@ -58,7 +58,8 @@ def set_battle_result(trainer, enemy_pokemon):
             else:
                 battle_result = "Win"  
                 return battle_result
-    if enemy_pokemon == 'mewtwo':
+            
+    if enemy_pokemon == 'Mewtwo':
         if trainer in top_players:
             if random.randint(0,10) <= 4:
                 battle_result = "Loss"
@@ -150,6 +151,3 @@ while index <= limit:
         battle_n += 1
     
     index += 1
-
-    #save_data.save_data_r(index,date,trainer,output_file,pokemon,enemy_pokemon,battle_n,round_n,damage_done, damage_taken,favorite_skill,battle_result)
-
