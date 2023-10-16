@@ -138,7 +138,7 @@ while index <= limit:
     trainer = random_data.trainers[random.randint(0,max_trainers)]
     pokemon = set_pokemon(trainer)
 
-    while battle_result != "Loss" and battle_n < 10:
+    while battle_result != "Loss" and battle_n < 11:
         
         pokemon_max_hp = random_data.pokemon_hp[pokemon]  
         enemy_pokemon = set_enemy_pokemon()    
