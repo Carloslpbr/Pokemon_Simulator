@@ -75,7 +75,6 @@ def set_battle_result(trainer, enemy_pokemon):
                 battle_result = "Win"  
                 return battle_result
 
-
 def set_damage_taken(pokemon, battle_result):
     if battle_result == "Loss":
         damage_taken = random_data.pokemon_hp[pokemon]
