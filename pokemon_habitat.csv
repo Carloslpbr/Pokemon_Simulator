@@ -5,9 +5,9 @@ Index, Name, Habitat
 4, Charmander, Mountains
 5, Charmeleon, Mountains
 6, Charizard, Mountains
-7, Squirtle, Water
-8, Wartortle, Water
-9, Blastoise, Water
+7, Squirtle, Lakes
+8, Wartortle, Lakes
+9, Blastoise, Lakes
 10, Caterpie, Forest
 11, Metapod, Forest
 12, Butterfree, Forest
@@ -52,15 +52,15 @@ Index, Name, Habitat
 51, Dugtrio, Caves
 52, Meowth, Urban
 53, Persian, Urban
-54, Psyduck, Water
-55, Golduck, Water
+54, Psyduck, Lakes
+55, Golduck, Lakes
 56, Mankey, Mountains
 57, Primeape, Mountains
 58, Growlithe, Mountains
 59, Arcanine, Mountains
-60, Poliwag, Water
-61, Poliwhirl, Water
-62, Poliwrath, Water
+60, Poliwag, Lakes
+61, Poliwhirl, Lakes
+62, Poliwrath, Lakes
 63, Abra, Mysterious Caves
 64, Kadabra, Mysterious Caves
 65, Alakazam, Mysterious Caves
@@ -70,32 +70,32 @@ Index, Name, Habitat
 69, Bellsprout, Gardens
 70, Weepinbell, Gardens
 71, Victreebel, Gardens
-72, Tentacool, Water
-73, Tentacruel, Water
+72, Tentacool, Lakes
+73, Tentacruel, Lakes
 74, Geodude, Caves
 75, Graveler, Caves
 76, Golem, Caves
 77, Ponyta, Mountains
 78, Rapidash, Mountains
-79, Slowpoke, Water
-80, Slowbro, Water
+79, Slowpoke, Lakes
+80, Slowbro, Lakes
 81, Magnemite, Power Plant
 82, Magneton, Power Plant
 83, Farfetch'd, Forest
 84, Doduo, Open Areas
 85, Dodrio, Open Areas
-86, Seel, Water
-87, Dewgong, Water
+86, Seel, Lakes
+87, Dewgong, Lakes
 88, Grimer, Sewers
 89, Muk, Sewers
-90, Shellder, Water
-91, Cloyster, Water
-92, Gastly, Haunted Places
-93, Haunter, Haunted Places
-94, Gengar, Haunted Places
+90, Shellder, Lakes
+91, Cloyster, Lakes
+92, Gastly, Ruins and Cemeteries
+93, Haunter, Ruins and Cemeteries
+94, Gengar, Ruins and Cemeteries
 95, Onix, Caves
-96, Drowzee, Mysterious Caves
-97, Hypno, Mysterious Caves
+96, Drowzee, Caves
+97, Hypno, Caves
 98, Krabby, Beaches
 99, Kingler, Beaches
 100, Voltorb, Power Plant
@@ -107,8 +107,8 @@ Index, Name, Habitat
 106, Hitmonlee, Fighting Dojos
 107, Hitmonchan, Fighting Dojos
 108, Lickitung, Forest
-109, Koffing, Sewers
-110, Weezing, Sewers
+109, Koffing, Urban
+110, Weezing, Urban
 111, Rhyhorn, Mountains
 112, Rhydon, Mountains
 113, Chansey, Hospitals
@@ -116,10 +116,10 @@ Index, Name, Habitat
 115, Kangaskhan, Forest
 116, Horsea, Beaches
 117, Seadra, Beaches
-118, Goldeen, Water
-119, Seaking, Water
-120, Staryu, Water
-121, Starmie, Water
+118, Goldeen, Lakes
+119, Seaking, Lakes
+120, Staryu, Lakes
+121, Starmie, Lakes
 122, Mr. Mime, Urban
 123, Scyther, Forest
 124, Jynx, Ice Caves
@@ -127,12 +127,12 @@ Index, Name, Habitat
 126, Magmar, Volcanoes
 127, Pinsir, Forest
 128, Tauros, Grasslands
-129, Magikarp, Water
-130, Gyarados, Water
-131, Lapras, Underwater Caves
+129, Magikarp, Lakes
+130, Gyarados, Lakes
+131, Lapras, UnderLakes Caves
 132, Ditto, Varied
 133, Eevee, Forest
-134, Vaporeon, Water
+134, Vaporeon, Lakes
 135, Jolteon, Power Plant
 136, Flareon, Volcanoes
 137, Porygon, Electronic Areas
@@ -141,12 +141,12 @@ Index, Name, Habitat
 140, Kabuto, Ancient Seas
 141, Kabutops, Ancient Seas
 142, Aerodactyl, Mountains
-143, Snorlax, Blocking Paths
+143, Snorlax, Forest
 144, Articuno, Ice Caves
 145, Zapdos, Power Plant
 146, Moltres, Volcanoes
-147, Dratini, Water
-148, Dragonair, Water
-149, Dragonite, Water
+147, Dratini, Lakes
+148, Dragonair, Lakes
+149, Dragonite, Lakes
 150, Mewtwo, Secret Research Areas
 151, Mew, Rare Locations
