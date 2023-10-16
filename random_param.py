@@ -4,7 +4,7 @@ import save_data
 import os
 
 
-limit = 10000
+limit = 100000
 index = 1
 max_trainers = len(random_data.trainers)-1
 max_pokemon = len(random_data.pokemon_list)-1
@@ -42,21 +42,38 @@ def set_enemy_pokemon():
         enemy_pokemon = random_data.pokemon_list[random.randint(0,max_pokemon)]
         return enemy_pokemon
 
-def set_battle_result(trainer):
-    if trainer in top_players:
-        if random.randint(0,10) <= 2:
-            battle_result = "Loss"
-            return battle_result
+def set_battle_result(trainer, enemy_pokemon):
+    if enemy_pokemon != 'mewtwo':
+        if trainer in top_players:
+            if random.randint(0,10) <= 2:
+                battle_result = "Loss"
+                return battle_result
+            else:
+                battle_result = "Win"
+                return battle_result
         else:
-            battle_result = "Win"
-            return battle_result
-    else:
-        if random.randint(0,10) <= 5:
-            battle_result = "Loss"
-            return battle_result
+            if random.randint(0,10) <= 5:
+                battle_result = "Loss"
+                return battle_result
+            else:
+                battle_result = "Win"  
+                return battle_result
+    if enemy_pokemon == 'mewtwo':
+        if trainer in top_players:
+            if random.randint(0,10) <= 4:
+                battle_result = "Loss"
+                return battle_result
+            else:
+                battle_result = "Win"
+                return battle_result
         else:
-            battle_result = "Win"  
-            return battle_result  
+            if random.randint(0,10) <= 10:
+                battle_result = "Loss"
+                return battle_result
+            else:
+                battle_result = "Win"  
+                return battle_result
+
 
 def set_damage_taken(pokemon, battle_result):
     if battle_result == "Loss":
@@ -124,7 +141,7 @@ while index <= limit:
         
         pokemon_max_hp = random_data.pokemon_hp[pokemon]  
         enemy_pokemon = set_enemy_pokemon()    
-        battle_result = set_battle_result(trainer)
+        battle_result = set_battle_result(trainer,enemy_pokemon)
         round_n = random.randint(1,15)
         favorite_skill = random_data.pokedex[pokemon]["favorite_skill"]
         damage_taken = set_damage_taken(pokemon, battle_result)
