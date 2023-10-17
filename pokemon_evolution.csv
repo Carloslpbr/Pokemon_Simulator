@@ -1,0 +1,152 @@
+pokemon,evolution 1, evolution 2, evolution 3, evolution 4
+bulbasaur,bulbasaur, ivysaur, venusaur,None
+ivysaur,bulbasaur, ivysaur, venusaur,None
+venusaur,bulbasaur, ivysaur, venusaur,None
+charmander,charmander, charmeleon, charizard,None
+charmeleon,charmander, charmeleon, charizard,None
+charizard,charmander, charmeleon, charizard,None
+squirtle,squirtle, wartortle, blastoise,None
+wartortle,squirtle, wartortle, blastoise,None
+blastoise,squirtle, wartortle, blastoise,None
+caterpie,caterpie, metapod, butterfree,None
+metapod,caterpie, metapod, butterfree,None
+butterfree,caterpie, metapod, butterfree,None
+weedle,weedle, kakuna, beedrill,None
+kakuna,weedle, kakuna, beedrill,None
+beedrill,weedle, kakuna, beedrill,None
+pidgey,pidgey, pidgeotto, pidgeot,None
+pidgeotto,pidgey, pidgeotto, pidgeot,None
+pidgeot,pidgey, pidgeotto, pidgeot,None
+rattata,rattata, raticate,None,None
+raticate,rattata, raticate,None,None
+spearow,spearow, fearow,None,None
+fearow,spearow, fearow,None,None
+ekans,ekans, arbok,None,None
+arbok,ekans, arbok,None,None
+pikachu,pichu, pikachu, raichu,None
+raichu,pichu, pikachu, raichu,None
+sandshrew,sandshrew, sandslash,None,None
+sandslash,sandshrew, sandslash,None,None
+nidoran-f,nidoran-f, nidorina, nidoqueen,None
+nidorina,nidoran-f, nidorina, nidoqueen,None
+nidoqueen,nidoran-f, nidorina, nidoqueen,None
+nidoran-m,nidoran-m, nidorino, nidoking,None
+nidorino,nidoran-m, nidorino, nidoking,None
+nidoking,nidoran-m, nidorino, nidoking,None
+clefairy,cleffa, clefairy, clefable,None
+clefable,cleffa, clefairy, clefable,None
+vulpix,vulpix, ninetales,None,None
+ninetales,vulpix, ninetales,None,None
+jigglypuff,igglybuff, jigglypuff, wigglytuff,None
+wigglytuff,igglybuff, jigglypuff, wigglytuff,None
+zubat,zubat, golbat, crobat,None
+golbat,zubat, golbat, crobat,None
+oddish,oddish, gloom, vileplume,None
+gloom,oddish, gloom, vileplume,None
+vileplume,oddish, gloom, vileplume,None
+paras,paras, parasect,None,None
+parasect,paras, parasect,None,None
+venonat,venonat, venomoth,None,None
+venomoth,venonat, venomoth,None,None
+diglett,diglett, dugtrio,None,None
+dugtrio,diglett, dugtrio,None,None
+meowth,meowth, persian,None,None
+persian,meowth, persian,None,None
+psyduck,psyduck, golduck,None,None
+golduck,psyduck, golduck,None,None
+mankey,mankey, primeape, annihilape,None
+primeape,mankey, primeape, annihilape,None
+growlithe,growlithe, arcanine,None,None
+arcanine,growlithe, arcanine,None,None
+poliwag,poliwag, poliwhirl, poliwrath,None
+poliwhirl,poliwag, poliwhirl, poliwrath,None
+poliwrath,poliwag, poliwhirl, poliwrath,None
+abra,abra, kadabra, alakazam,None
+kadabra,abra, kadabra, alakazam,None
+alakazam,abra, kadabra, alakazam,None
+machop,machop, machoke, machamp,None
+machoke,machop, machoke, machamp,None
+machamp,machop, machoke, machamp,None
+bellsprout,bellsprout, weepinbell, victreebel,None
+weepinbell,bellsprout, weepinbell, victreebel,None
+victreebel,bellsprout, weepinbell, victreebel,None
+tentacool,tentacool, tentacruel,None,None
+tentacruel,tentacool, tentacruel,None,None
+geodude,geodude, graveler, golem,None
+graveler,geodude, graveler, golem,None
+golem,geodude, graveler, golem,None
+ponyta,ponyta, rapidash,None,None
+rapidash,ponyta, rapidash,None,None
+slowpoke,slowpoke, slowbro,None,None
+slowbro,slowpoke, slowbro,None,None
+magnemite,magnemite, magneton, magnezone,None
+magneton,magnemite, magneton, magnezone,None
+farfetchd,farfetchd, sirfetchd,None,None
+doduo,doduo, dodrio,None,None
+dodrio,doduo, dodrio,None,None
+seel,seel, dewgong,None,None
+dewgong,seel, dewgong,None,None
+grimer,grimer, muk,None,None
+muk,grimer, muk,None,None
+shellder,shellder, cloyster,None,None
+cloyster,shellder, cloyster,None,None
+gastly,gastly, haunter, gengar,None
+haunter,gastly, haunter, gengar,None
+gengar,gastly, haunter, gengar,None
+onix,onix, steelix,None,None
+drowzee,drowzee, hypno,None,None
+hypno,drowzee, hypno,None,None
+krabby,krabby, kingler,None,None
+kingler,krabby, kingler,None,None
+voltorb,voltorb, electrode,None,None
+electrode,voltorb, electrode,None,None
+exeggcute,exeggcute, exeggutor,None,None
+exeggutor,exeggcute, exeggutor,None,None
+cubone,cubone, marowak,None,None
+marowak,cubone, marowak,None,None
+hitmonlee,tyrogue, hitmonlee,None,None
+hitmonchan,None,None,None,None
+lickitung,lickitung, lickilicky,None,None
+koffing,koffing, weezing,None,None
+weezing,koffing, weezing,None,None
+rhyhorn,rhyhorn, rhydon, rhyperior,None
+rhydon,rhyhorn, rhydon, rhyperior,None
+chansey,happiny, chansey, blissey,None
+tangela,tangela, tangrowth,None,None
+kangaskhan,kangaskhan, None,None,None
+horsea,horsea, seadra, kingdra,None
+seadra,horsea, seadra, kingdra,None
+goldeen,goldeen, seaking,None,None
+seaking,goldeen, seaking,None,None
+staryu,staryu, starmie,None,None
+starmie,staryu, starmie,None,None
+mr-mime,mime-jr, mr-mime, mr-rime,None
+scyther,scyther, scizor,None,None
+jynx,smoochum, jynx,None,None
+electabuzz,elekid, electabuzz, electivire,None
+magmar,magby, magmar, magmortar,None
+pinsir,pinsir, None,None,None
+tauros,tauros, None,None,None
+magikarp,magikarp, gyarados,None,None
+gyarados,magikarp, gyarados,None,None
+lapras,lapras, None,None,None
+ditto,ditto, None,None,None
+eevee,eevee, vaporeon, jolteon, flareon
+vaporeon,eevee, vaporeon, jolteon, flareon
+jolteon,eevee, vaporeon, jolteon, flareon
+flareon,eevee, vaporeon, jolteon, flareon
+porygon,porygon, porygon2, porygon-z,None
+omanyte,omanyte, omastar,None,None
+omastar,omanyte, omastar,None,None
+kabuto,kabuto, kabutops,None,None
+kabutops,kabuto, kabutops,None,None
+aerodactyl,aerodactyl, None,None,None
+snorlax,munchlax, snorlax,None,None
+articuno,articuno, None,None,None
+zapdos,zapdos, None,None,None
+moltres,moltres, None,None,None
+dratini,dratini, dragonair, dragonite,None
+dragonair,dratini, dragonair, dragonite,None
+dragonite,dratini, dragonair, dragonite,None
+mewtwo,mewtwo,None,None,None
+mew,mew,None,None,None
