@@ -49,6 +49,6 @@ with open(load_file, 'r', encoding='utf8') as file:
                     ev1 = chain_evolution_2                   
                     ev2 = pokemon
         if base == None and ev1 == None and ev2 == None:
-            ...
+            print(f'{pokemon}')
         else:
             print(f'Evoluções de {pokemon} = {base}, {ev1}, {ev2}')
