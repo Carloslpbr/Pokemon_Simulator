@@ -62,9 +62,9 @@ def evolution_chain():
 
             # Escreve os dados da cadeia de evolução no arquivo CSV
             if evolution_2 is not None:
-                file_2.write(f'"{base_form}", "{evolution_1}", "{evolution_2}" \n')
+                file_2.write(f'{base_form}, {evolution_1}, {evolution_2} \n')
             else:
-                file_2.write(f'"{base_form}", "{evolution_1}" \n')
+                file_2.write(f'{base_form}, {evolution_1} \n')
 
         os.system('cls')
 
