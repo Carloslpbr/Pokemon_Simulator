@@ -51,7 +51,7 @@ def stats_desc(stat_value):
 
 def pokemon_skills(pokemon):
     pSkills = pokemon_moves.get_moves(pokemon, "https://pokeapi.co/api/v2/pokemon/")
-    skill_list = pSkills  # Assuming pSkills contains a list of moves
+    skill_list = pSkills  
     total_skills = len(skill_list)
     pSkill_set = []
 
