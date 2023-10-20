@@ -1,0 +1,17 @@
+bug,https://drive.google.com/uc?id=1cDBa2dfU8wh7sE1NLivxVvj4FWb6F1nA
+dragon,https://drive.google.com/uc?id=1wrZjsBwPaNAZZHMaAOMKDzRLnISbZdQK
+electric,https://drive.google.com/uc?id=1AVXKaHw0Gf7erUoeBYnFG15H9l46n8yy
+fairy,https://drive.google.com/uc?id=d/1nB20g9ULVw2F-ewEAb0KvoTpITyshZ6a
+fighting,https://drive.google.com/uc?id=1GAmWnPoArU_cDqwcUX5RHIZH9p1_dDA3g
+fire,https://drive.google.com/uc?id=1f34ASTJlrF__qQFI6g7L9mgZyN9m9rct
+flying,https://drive.google.com/uc?id=1GVKba-aGPSNVuKXzfDp81ATWcbHa1QK2
+ghost,https://drive.google.com/uc?id=1Z1aS2wEpkZgCkau7W6hjIk4-FFLeEmoW
+grass,https://drive.google.com/uc?id=1DB2pGZGTPUsPdkJujs9F-kiuPLNX9Qzy
+ground,https://drive.google.com/uc?id=1yqQwjQrlk6VNyoq6rp61SB29NS8VX2zq
+ice,https://drive.google.com/uc?id=1Ty5MWdS47sAIvpkD8s2ZSmWwHtLp8FoK
+normal,https://drive.google.com/uc?id=1eEnTtktGomtLNqit4oqkb8kKybga87yl
+poison,https://drive.google.com/uc?id=1Er22A1SjJQtu1ZjtuZlnmTLPAVtcdBK9
+psychic,https://drive.google.com/uc?id=16bQNKyNCWNyC5Zs11KmchLwjz9Ry97ov
+rock,https://drive.google.com/uc?id=1eoGaSSgzZLtaHyg_5eiICML48FSR_Y36
+steel,https://drive.google.com/uc?id=1Fx5j0X1WT8VsKi4dQ42Y-ZlsqJgSvyvq
+water,https://drive.google.com/uc?id=1tmstUuRj258VdSj5vezYGjLSizmb5eAa
